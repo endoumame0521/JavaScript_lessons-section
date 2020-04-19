@@ -1,17 +1,22 @@
 // 厳密なエラーを発見するもの。とりあえず書いておく。
 'use strict';
 
-//定数 const
-//変数 let var　varは古いので使用しない
 
-// console.log(150 * 140);
-// console.log(150 * 160);
+// 変数let
 
-let price = 150;
-console.log(price * 140);
-console.log(price * 160);
+let price = 500;
 
-price = 170;
-console.log(price * 140);
-console.log(price * 160);
+// price = price + 100;
+price += 100; // 600
 
+// price = price * 2;
+price *= 2; // 1200
+
+// price = price +1;
+// price += 1;
+price++; // 1201
+
+// price -= 1;
+price--; // 1200
+
+console.log(price)
