@@ -1,17 +1,15 @@
 // 厳密なエラーを発見するもの。とりあえず書いておく。
 'use strict';
 
-// console.log('hello');
-// console.log("hello");
+// console.log(10 + 3); // 13
+// console.log(10 - 3); // 7
+// console.log(10 * 3); // 30
+// console.log(10 / 3); //3.333
+// console.log(10 % 3); // 1
+// console.log(10 ** 3); // 1000
 
-// console.log('it's me!');
-// console.log("it's me");
+// 演算子
+// 優先度
 
-// \〇〇　：　〇〇は文字列として扱われる
-// console.log('it\'s me');
-
-// \n 改行、\t tab
-// console.log('hel\nlo wor\tld');
-
-// 文字列の連結
-console.log('hello' + 'world');
+console.log(2 + 10 * 3); //32
+console.log((2 + 10) * 3); //36
