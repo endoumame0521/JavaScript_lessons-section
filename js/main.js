@@ -2,8 +2,10 @@
 'use strict';
 
 {
-  const x = 100;
-  console.log(x);
-}
+  // const score1 = 80;
+  // const score2 = 90;
+  // const score3 = 40;
 
-// ブロックで囲う
+  const scores = [80, 90, 40]
+  console.log(scores)
+}
