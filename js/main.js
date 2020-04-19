@@ -2,19 +2,23 @@
 'use strict';
 
 {
+  const otherProps = {
+    r: 4,
+    color: 'red',
+  };
+
   const point = {
     x: 100,
     y: 180,
+    ...otherProps, // オブジェクトのスプレッド構文
   };
 
-  point.x = 120;
-  // point['x'] = 120;
+  // console.log(point);
 
-  // console.log(point.x);
-  // console.log(point['y']);
+  // オブジェクトの分割代入
+  const {x, r, ...others} = point;
 
-  point.z = 90;
-  delete point.y;
-
-  console.log(point);
+  console.log(x);
+  console.log(r);
+  console.log(others);
 }
