@@ -4,33 +4,11 @@
 // カプセル化
 {
   // クラスの定義
-  class SponsoredPost {
-    constructor(text, sponsor) {
-      this.text = text;
-      this.likeCount = 0;
-      this.sponsor = sponsor;
-    }
-
-    // メソッド
-    show() {
-      console.log(`${this.text} - ${this.likeCount} likes`);
-      console.log(`...sponsored by ${this.sponsor}`);
-    }
-
-    like() {
-      this.likeCount++
-      this.show();
-    }
-
-  }
-
-  // クラスの定義
-  class Post {
+  class Post { // 親クラス
     constructor(text) {
       this.text = text;
       this.likeCount = 0;
     }
-
     // メソッド
     show() {
       console.log(`${this.text} - ${this.likeCount} likes`);
@@ -40,7 +18,19 @@
       this.likeCount++
       this.show();
     }
+  }
 
+  // 親クラス（Post）を継承
+  class SponsoredPost extends Post { // 子クラス
+    constructor(text, sponsor) {
+      super(text);
+      this.sponsor = sponsor;
+    }
+    // メソッド
+    show() {
+      super.show();
+      console.log(`...sponsored by ${this.sponsor}`);
+    }
   }
 
   const posts = [
