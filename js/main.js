@@ -6,15 +6,12 @@
 
   function showTime() {
     console.log(new Date());
+    const timeoutId = setTimeout(showTime, 1000);
     i++;
-    if (i >2) {
-      // この関数が3回実行されたら終了させる
-      clearInterval(intervalId);
+    if (i > 2) {
+      clearTimeout(timeoutId);
     }
   }
 
-  // 関数そのものを100ms毎に実行し続ける
-  // 注意）関数の（）は要らない。
-  // （）を入れてしまうと、関数の返り値を繰り返し処理してしまう。
-  const intervalId = setInterval(showTime, 1000);
+  showTime();
 }
