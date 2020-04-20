@@ -2,15 +2,20 @@
 'use strict';
 
 {
-  // const name = 'taguchi';
-  const name = 5;
+  const posts = [
+    {
+      text: 'JavaScriptの勉強中・・・',
+      likeCount: 0,
+    },
+    {
+      text: 'プログラミング楽しい！',
+      likeCount: 0,
+    },
+  ];
 
-  // try {} で囲った箇所は、エラーが発生しても、そこで止まることはない。
-  try {
-    console.log(name.toUpperCase());
-  } catch (e) {
-    console.log(e);
+  function show(post) {
+    console.log(`${post.text} - ${post.likeCount}いいね`);
   }
 
-  console.log('Finish');
+  show(posts[0]);
 }
