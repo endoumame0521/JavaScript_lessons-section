@@ -2,14 +2,11 @@
 'use strict';
 
 {
-  // 入力フォームの操作
+  // セレクトボックスの操作
   document.querySelector('button').addEventListener('click', () => {
     const li = document.createElement('li');
-    const text = document.querySelector('input');
-    li.textContent = text.value;
+    const color = document.querySelector('select');
+    li.textContent = `${color.value} - ${color.selectedIndex}`;
     document.querySelector('ul').appendChild(li);
-
-    text.value = '';
-    text.focus();
   });
 }
