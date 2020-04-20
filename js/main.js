@@ -2,10 +2,7 @@
 'use strict';
 
 {
-  // 0以上1未満のランダムな数値を発生
-  // console.log(Math.random());
-
-  // 1から6の自然数をランダムに発生
-  console.log(Math.floor(Math.random() * 6) + 1);
-
+  const d = new Date();
+  // console.log(d);
+  console.log(`${d.getMonth() + 1} 月 ${d.getDate()} 日`);
 }
